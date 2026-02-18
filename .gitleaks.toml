@@ -1,0 +1,8 @@
+title = "openclaw-mcp-tools gitleaks config"
+
+[allowlist]
+description = "Known test fixtures and operational memory paths"
+paths = [
+  '''^src/security-auditor/tests/fixtures/''',
+  '''^memory/'''
+]
