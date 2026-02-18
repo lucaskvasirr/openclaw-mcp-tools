@@ -1,0 +1,21 @@
+# Dependencies & build
+node_modules/
+dist/
+
+# Environment & local artifacts
+.env
+*.log
+*.tmp
+*.local
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Prevent accidental operational/memory docs from being committed
+memory/
+COMPETITORS.md
+IDEAS.md
+RESEARCH.md

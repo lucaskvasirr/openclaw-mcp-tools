@@ -1,0 +1,20 @@
+{
+  "name": "security-auditor",
+  "version": "0.1.0",
+  "description": "MCP security auditing tool for OpenClaw.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx src/test-runner.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "latest",
+    "typescript": "^5.0.0"
+  }
+}
