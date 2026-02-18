@@ -16,7 +16,8 @@ const ALLOWLIST_PREFIXES = [
   'scripts/',
   'src/security-auditor/',
   '.gitignore',
-  'README.md'
+  'README.md',
+  '.gitleaks.toml'
 ];
 
 const BLOCK_PATTERNS = [
