@@ -1,0 +1,29 @@
+name: Security Guardrails
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  guardrails:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check repository allowlist + blocked paths
+        run: node scripts/check-allowed-paths.js
+
+      - name: Install security-auditor deps
+        run: npm install
+        working-directory: src/security-auditor
+
+      - name: Run tests
+        run: npm test
+        working-directory: src/security-auditor
